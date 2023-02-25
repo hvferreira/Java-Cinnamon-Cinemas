@@ -7,9 +7,17 @@ public class Cinnamon {
     private TheatreRoom theatreRoom;
 
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public TheatreRoom getTheatreRoom() {
+        return theatreRoom;
+    }
+
     public Cinnamon() {
         this.customer = new Customer();
-        this.theatreRoom= new TheatreRoom();
+        this.theatreRoom = new TheatreRoom();
     }
 
 
