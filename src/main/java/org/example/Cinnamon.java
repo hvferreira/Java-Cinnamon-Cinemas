@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Random;
+
 public class Cinnamon {
 
 
@@ -21,4 +23,9 @@ public class Cinnamon {
     }
 
 
+    public int random() {
+        Random random = new Random();
+
+        return random.nextInt((3 - 1) + 1) + 1;
+    }
 }

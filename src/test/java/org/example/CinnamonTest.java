@@ -21,7 +21,14 @@ class CinnamonTest {
     void cinema() {
         Cinnamon cinnamon = new Cinnamon();//create customer and TheatreRoom
         Customer customer = cinnamon.getCustomer();
-        TheatreRoom theatreRoom = cinnamon.getTheatreRoom();
+        TheatreRoom theatreRoom = cinnamon.getTheatreRoom();//create movie and hashSeats
 
+    }
+
+    @Test
+    void randonTest() {
+        Cinnamon cinnamon = new Cinnamon();
+        int numRandom = cinnamon.random();
+        assertTrue(1 <= numRandom && numRandom <= 3);
     }
 }
