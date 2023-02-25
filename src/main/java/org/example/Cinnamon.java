@@ -25,7 +25,21 @@ public class Cinnamon {
 
     public int random() {
         Random random = new Random();
-
         return random.nextInt((3 - 1) + 1) + 1;
+    }
+
+    public void numOfTickets() {
+        int numRandom = random();
+        int i = 0;
+        while (i < numRandom) {
+            if (theatreRoom.roomSize() < 15) {
+                Ticket ticket = new Ticket(theatreRoom.getFilm(), theatreRoom, theatreRoom.createSeat());
+                customer.setTicketList(ticket);
+            } else {
+                i = numRandom;
+                System.out.println("ROOM IS FULL");
+            }
+            i++;
+        }
     }
 }
