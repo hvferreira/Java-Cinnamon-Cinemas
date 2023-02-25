@@ -18,10 +18,18 @@ class CinnamonTest {
     }
 
     @Test
-    void cinema() {
+    void numOfTicketsTest() {
         Cinnamon cinnamon = new Cinnamon();//create customer and TheatreRoom
         Customer customer = cinnamon.getCustomer();
-        TheatreRoom theatreRoom = cinnamon.getTheatreRoom();//create movie and hashSeats
+
+        cinnamon.numOfTickets();
+
+        assertEquals(customer.sizeTicketList(), cinnamon.getTheatreRoom().roomSize());
+
+        for (int i = 0; i < 10; i++) {
+            cinnamon.numOfTickets();
+        }
+        assertEquals(customer.sizeTicketList(), cinnamon.getTheatreRoom().roomSize());
 
     }
 
