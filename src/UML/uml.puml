@@ -1,0 +1,34 @@
+@startuml
+class Ticket{
+}
+
+class Seat{
+}
+
+class Customer{
+}
+
+class Movie{
+}
+
+class Pay{
+}
+
+class Cinnamon{
+}
+
+class TheatreRoom{
+}
+
+enum Row{
+}
+
+Customer -right- Cinnamon
+TheatreRoom -- Seat
+Seat -- Row
+Cinnamon -down- Pay
+Cinnamon -right- Ticket
+Ticket -right- TheatreRoom
+TheatreRoom -up- Movie
+
+@enduml
