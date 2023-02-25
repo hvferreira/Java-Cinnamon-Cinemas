@@ -1,8 +1,25 @@
 @startuml
 class Ticket{
+
+
+
+
+
+
+
+
+
 }
 
 class Seat{
+
+
+
+
+
+
+
+
 }
 
 class Customer{
@@ -11,7 +28,7 @@ class Customer{
 class Movie{
 }
 
-class Pay{
+class Payment{
 }
 
 class Cinnamon{
@@ -21,14 +38,21 @@ class TheatreRoom{
 }
 
 enum Row{
+
+
+
+
+
+
+
 }
 
 Customer -right- Cinnamon
 TheatreRoom -- Seat
 Seat -- Row
-Cinnamon -down- Pay
-Cinnamon -right- Ticket
-Ticket -right- TheatreRoom
+Cinnamon -down- Payment
+Cinnamon -up- Ticket
+Cinnamon -right- TheatreRoom
 TheatreRoom -up- Movie
 
 @enduml
