@@ -7,8 +7,6 @@ public class TheatreRoom {
     private HashMap<String, Integer> room;
     private String lastSeatOccupied;
     private final String EMPTYROOM = "A0";
-    private final int COLUMNSTART = 1;
-    private final int COLUMNEND = 5;
 
     private final String ROW = "ABC";
     private int positionRow = 0;
@@ -29,7 +27,6 @@ public class TheatreRoom {
 
 
     public Seat createSeat() {
-        //System.out.println(lastSeatOccupied.charAt(1));
         if (lastSeatOccupied.charAt(1) == '5') {
             positionRow = positionRow + 1;
             lastSeatOccupied = String.valueOf(ROW.charAt(positionRow)) + "1";
@@ -41,10 +38,7 @@ public class TheatreRoom {
             room.put(lastSeatOccupied, 1);
             return new Seat(String.valueOf(ROW.charAt(positionRow)), String.valueOf(numb));
         }
-
     }
-
-
 }
 
 

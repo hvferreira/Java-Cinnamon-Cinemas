@@ -1,58 +1,75 @@
 @startuml
 class Ticket{
-
-
-
-
-
-
-
-
-
+- Movie movie;
+- TheatreRoom theatreRoom;
+- Seat seat;
+__
++ Ticket(Movie movie, TheatreRoom theatreRoom, Seat seat)
+..
++ Seat getSeat()
++ TheatreRoom getTheatreRoom()
++ Movie getMovie()
 }
 
 class Seat{
-
-
-
-
-
-
-
-
+- String row
+- String seatNumb
+__
++ Seat(String row, String seatNumb)
+..
++ String getRow()
++ String getSeatNumb()
 }
 
 class Customer{
+- ArrayList<Ticket> ticketList
+__
++ Customer()
+..
++ void setTicketList(Ticket ticket)
++ int sizeTicketList()
 }
 
 class Movie{
+- String MOVIENAME = "TITANIC"
 }
 
 class Payment{
 }
 
 class Cinnamon{
+- Customer customer
+- TheatreRoom theatreRoom
+__
++ Cinnamon()
+..
++ TheatreRoom getTheatreRoom()
++ Customer getCustomer()
++ int random()
++ void numOfTickets()
 }
 
 class TheatreRoom{
+- Movie film
+- HashMap<String, Integer> room
+- String lastSeatOccupied
+- String EMPTYROOM = "A0"
+- String ROW = "ABC"
+- int positionRow = 0
+__
++ TheatreRoom()
+..
++ Movie getFilm()
++ int roomSize()
++ Seat createSeat()
 }
 
-enum Row{
-
-
-
-
-
-
-
-}
 
 Customer -right- Cinnamon
 TheatreRoom -- Seat
-Seat -- Row
 Cinnamon -down- Payment
 Cinnamon -up- Ticket
 Cinnamon -right- TheatreRoom
-TheatreRoom -up- Movie
+TheatreRoom -right- Movie
 
 @enduml
