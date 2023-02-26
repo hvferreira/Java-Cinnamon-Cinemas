@@ -27,7 +27,7 @@ Assure all tests passed and committed for each test completed.
 
 ## UML
 
-![This is an image] (https://github.com/hvferreira/Java-Cinnamon-Cinemas/blob/master/src/UML/uml.png)
+![This is an image](https://github.com/hvferreira/Java-Cinnamon-Cinemas/blob/master/src/UML/uml.png)
 
 ## Future Thoughts
 
