@@ -11,6 +11,8 @@ public class TheatreRoom {
     private final String ROW = "ABC";
     private int positionRow = 0;
 
+    private final char LASTNUMOFCOLUMN = '5';
+
     public Movie getFilm() {
         return film;
     }
@@ -19,6 +21,7 @@ public class TheatreRoom {
         this.film = new Movie();
         room = new HashMap<>();
         lastSeatOccupied = EMPTYROOM;
+
     }
 
     public int roomSize() {
@@ -27,7 +30,7 @@ public class TheatreRoom {
 
 
     public Seat createSeat() {
-        if (lastSeatOccupied.charAt(1) == '5') {
+        if (lastSeatOccupied.charAt(1) == LASTNUMOFCOLUMN) {
             positionRow = positionRow + 1;
             lastSeatOccupied = String.valueOf(ROW.charAt(positionRow)) + "1";
             room.put(lastSeatOccupied, 1);

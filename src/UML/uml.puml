@@ -40,6 +40,9 @@ class Payment{
 class Cinnamon{
 - Customer customer
 - TheatreRoom theatreRoom
+- int ROOMSIZE
+- int MAXNUMTICKET=3;
+- int MINNUMTICKET=1;
 __
 + Cinnamon()
 ..
@@ -56,6 +59,7 @@ class TheatreRoom{
 - String EMPTYROOM = "A0"
 - String ROW = "ABC"
 - int positionRow = 0
+- char LASTNUMOFCOLUMN
 __
 + TheatreRoom()
 ..
